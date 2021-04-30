@@ -51,6 +51,7 @@ export default {
 .goods-item img {
   width: 100%;
   border-radius: 5px;
+  height: 100%;
 }
 
 .goods-info {
@@ -67,7 +68,6 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-bottom: 3px;
 }
 
 .goods-info .price {

@@ -1,7 +1,7 @@
 <template>
   <div id="home" class="wrapper">
     <nav-bar class="home-nav">
-      <div slot="center">购物街</div>
+      <div slot="center">首页</div>
     </nav-bar>
     <tab-control
       :titles="['流行', '新款', '精选']"
@@ -40,7 +40,7 @@ import GoodList from "components/content/goods/GoodsList";
 import Scroll from "components/common/scroll/Scroll";
 
 import { getHomeMultidata, getHomeGoods } from "network/home";
-import { itemListenerMixin, backTopMixin } from "common/mixin";
+import { itemListenerMixin, backTopMixin, tabControlMixin } from "common/mixin";
 
 export default {
   name: "Home",
@@ -53,17 +53,17 @@ export default {
     GoodList,
     Scroll,
   },
-  mixins: [itemListenerMixin, backTopMixin],
+  mixins: [itemListenerMixin, backTopMixin, tabControlMixin],
   data() {
     return {
       banners: [],
       recommends: [],
+      currentType: "pop",
       goods: {
         pop: { page: 0, list: [] },
         new: { page: 0, list: [] },
         sell: { page: 0, list: [] },
       },
-      currentType: "pop",
       tabOffsetTop: 0,
       isTabFixed: false,
       saveY: 0,
@@ -164,6 +164,7 @@ export default {
 .home-nav {
   background-color: var(--color-tint);
   color: #fff;
+  font-weight: 700;
   /* margin-top: 2px; */
   /* 在使用浏览器原生滚动时，为了让导航不跟随一起滚动
   position: fixed;

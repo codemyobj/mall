@@ -72,7 +72,7 @@ export default {
 }
 
 .bar-left .service {
-  background-position: 0 -54px;
+  background-position: 0 -52px;
 }
 
 .bar-left .shop {

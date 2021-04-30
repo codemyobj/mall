@@ -260,10 +260,10 @@ export default {
 </script>
 <style scoped>
 #detail {
+  height: 100vh;
   position: relative;
   z-index: 9;
   background-color: #fff;
-  height: 100vh;
 }
 .detail-nav {
   position: relative;
@@ -271,11 +271,9 @@ export default {
   background-color: #fff;
 }
 .content {
-  width: 100%;
-  height: calc(100% - 103px);
-  overflow: hidden;
-}
-/* .detail-bottom {
+  /* height: calc(100% - 49px); */
   position: absolute;
-} */
+  top: 44px;
+  bottom: 59px;
+}
 </style>

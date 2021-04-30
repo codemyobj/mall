@@ -10,6 +10,7 @@ const Detail = () => import('../views/detail/Detail')
 // 1.安装插件
 Vue.use(VueRouter)
 
+
 // 2.创建router
 const routes = [
   {
